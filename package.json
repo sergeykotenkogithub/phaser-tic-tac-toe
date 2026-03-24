@@ -1,0 +1,17 @@
+{
+  "name": "phaser-tic-tac-toe",
+  "version": "1.0.0",
+  "description": "Tic Tac Toe game with Phaser.js and TypeScript",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "phaser": "^3.80.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.2",
+    "vite": "^5.1.6"
+  }
+}
