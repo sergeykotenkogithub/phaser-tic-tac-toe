@@ -71,15 +71,18 @@ export class GameScene extends Phaser.Scene {
   private awardRewards(): void {
     const dustAmount = Phaser.Math.Between(10, 50);
     this.starDust += dustAmount;
-    
-    const gotCrystal = Phaser.Math.Between(1, 100) <= 10;
+
+    const roll = Phaser.Math.Between(1, 100);
+    const сrystalDropChance = 10
+    const gotCrystal = roll <= сrystalDropChance;
+
     if (gotCrystal) {
       this.rareCrystals++;
     }
-    
+
     this.saveRewards();
     this.updateRewardsText();
-    
+
     let rewardMessage = `+${dustAmount} Звёздной пыли`;
     if (gotCrystal) {
       rewardMessage += ` | +1 Редкий кристалл!`;
